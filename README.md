@@ -5,7 +5,7 @@ Teste unitário simples utilizando a linguagem Scala e utilizando JUnit
 
 IMPORTANTE
 
-Java JDK 1.8
+Java JDK 1.8 ou 16
 Scala SDK 2.12.14
 
 O projeto é criado usando a opção maven do Java, então renomeei as sub pastas da pasta main e test de nome java para scala.
