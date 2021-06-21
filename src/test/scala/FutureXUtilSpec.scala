@@ -6,4 +6,8 @@ class FutureXUtilSpec extends AnyFlatSpec {
     assert(10 == FutureXUtil.divideVars(30, 3))
   }
 
+  it should "match2" in {
+    assert(15 == FutureXUtil.divideVars(30, 2))
+  }
+
 }
