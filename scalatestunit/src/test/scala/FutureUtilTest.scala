@@ -1,6 +1,11 @@
-import org.junit.Assert.assertEquals
+import org.junit.{After, Before}
 
 class FutureUtilTest {
+
+  @After
+  def setup(): Unit ={
+    println("----------------------------Setting.....----------------------------")
+  }
 
   @org.junit.Test
   def testDivideVars(): Unit = {
@@ -8,6 +13,11 @@ class FutureUtilTest {
     var actual: Int = FutureXUtil.divideVars(30, 3);
 
     assert(expected == actual)
+  }
+
+  @Before
+  def clear(): Unit ={
+    println("----------------------------Cleaning up...----------------------------")
   }
 
 }
