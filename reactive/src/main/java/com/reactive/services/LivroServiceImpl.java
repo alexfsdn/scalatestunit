@@ -1,7 +1,7 @@
-package com.reactive.reactive.services;
+package com.reactive.services;
 
-import com.reactive.reactive.models.Livro;
-import com.reactive.reactive.repository.LivroRepository;
+import com.reactive.models.Livro;
+import com.reactive.repositories.LivroRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
@@ -21,9 +21,8 @@ public class LivroServiceImpl implements LivroService {
     }
 
     @Override
-    public Mono<Livro> findById(String id) {
-        UUID uuid = UUID.fromString(id);
-        return livroRepository.findById(uuid);
+    public Mono<Livro> findById(Long id) {
+        return livroRepository.findById(id);
     }
 
     @Override
